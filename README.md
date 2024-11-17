@@ -2,7 +2,8 @@
 **Team Members:**
 1. Gurmann Singh Ajmani (3rd year student at MIT,Manipal)
 2. Ashvin Ganesh (3rd year student at MIT,Manipal)
-## Data Preprocessing
+## Data Preprocessing([Processed File](./EDA/Modified_Data.csv))
+
 
 1. **Lemmatization**: Reduction of words to their base words for capturing their meaning better
 2. **Removal of Stop words**: Remove stopwords (commonly occuring words) which do not contribute to the meaning of the word.
@@ -20,14 +21,14 @@
 6. **Removal of Null values**: Remove all the null values
 7. **Extract Input Embeddings**: Convert the text to their respective numeric embeddings
 
-## EDA PERFORMED
-1. We used **Boxplots** to identify the outliers/anomalies amongst the categories and subcategories
-2. We used **count plots and distribution plots** to identify most common categories and subcategories.
-3. We use **WordClouds** to identify the most common words used in messages of each category and subcategory. This helps in identifying the key words and indicators of each distribution
-4. We used **heatmaps** to visualize **correlation** between categories and subcategories.
+## EDA PERFORMED([CODES](./EDA/Data_Analysis.ipynb))
+1. We used **Boxplots** to identify the outliers/anomalies amongst the categories and subcategories. ([CODES](./EDA/plots/boxplots/)) 
+2. We used **count plots and distribution plots** to identify most common categories and subcategories. ([COUNTS](./EDA/plots/Class_counts/)) and  ([DISTRIBUTION](./EDA/plots/numerical_distributions/))
+3. We use **WordClouds** to identify the most common words used in messages of each category and subcategory. This helps in identifying the key words and indicators of each distribution ([CODES](./EDA/WordClouds.ipynb))
+4. We used **heatmaps** to visualize **correlation** between categories and subcategories.([CODES](./EDA/plots/heatmaps/))
 
 
-##  VARIOUS NLP MODELS USED:
+##  VARIOUS NLP MODELS USED: ([ALL  NOTEBOOKS](./models/))
 1. **BERT-BASE**: Created by Google, it has **110 million parameters** and is designed for bidirectional understanding of language through a masked language model.
 2. **DISTILBERT**:**Developed by Hugging Face, it is a distilled version of BERT with **66 million parameters**, offering faster performance with minimal accuracy loss.
 3. **ROBERTA**:Created by Facebook AI, it has **125 million parameters** and improves BERT with optimizations like larger training data and longer sequences.
@@ -58,4 +59,11 @@ As seen, **BERT-BASE is the best performing model for category classification**.
 | FAST TEXT   | 37.9%              | 41.8%               |
 | ELECTRA     | 63.6%              | 56.6%               |
 | XLNET       | 58%                | 55%                 |
+
+
+
+
 Again, **BERT-BASE is the best performing model for subcategory classification**.
+
+
+Hence , **BERT-BASE** is the best model for this task.
